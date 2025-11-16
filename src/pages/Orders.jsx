@@ -9,6 +9,7 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaCity,
+  FaTools,
 } from "react-icons/fa";
 
 export default function Orders() {
@@ -80,6 +81,11 @@ export default function Orders() {
                 </th>
                 <th className="py-3 px-6 font-semibold">
                   <div className="flex items-center gap-2">
+                   <FaTools /> Service
+                  </div>
+                </th>
+                <th className="py-3 px-6 font-semibold">
+                  <div className="flex items-center gap-2">
                     <FaCheckCircle /> Status
                   </div>
                 </th>
@@ -112,6 +118,9 @@ export default function Orders() {
                     <td className="py-3 px-6 text-gray-700">{o.tenure}</td>
                     <td className="py-3 px-6 text-gray-700 font-semibold">
                       ₹{o.amount}
+                    </td>
+                    <td className="py-3 px-6 text-gray-700 font-semibold">
+                      {o.service}
                     </td>
                     <td className="py-3 px-6">
                       <span
