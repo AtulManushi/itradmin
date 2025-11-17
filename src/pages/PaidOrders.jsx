@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaCity,
+  FaTools,
 } from "react-icons/fa";
 
 export default function PaidOrders() {
@@ -62,6 +63,11 @@ export default function PaidOrders() {
                   <FaRupeeSign className="text-sm" /> Amount
                 </div>
               </th>
+              <th className="py-3 px-6 font-semibold">
+                <div className="flex items-center gap-2">
+                  <FaTools /> Service
+                </div>
+              </th>
               <th className="py-3 px-6 font-semibold text-sm uppercase tracking-wider">
                 <div className="flex items-center gap-2">
                   <FaCheckCircle className="text-sm" /> Status
@@ -93,9 +99,10 @@ export default function PaidOrders() {
                     {o.location || "N/A"}
                   </td>
                   <td className="py-3 px-6 text-gray-700">{o.plan}</td>
-                  <td className="py-3 px-6 text-gray-700">
-                    ₹{o.amount}
-                  </td>
+                  <td className="py-3 px-6 text-gray-700">₹{o.amount}</td>
+                  <td className="py-3 px-6 text-gray-700 font-semibold">
+                      {o.service}
+                    </td>
                   <td className="py-3 px-6">
                     <span
                       className={`px-3 py-1 text-sm rounded-full font-semibold ${

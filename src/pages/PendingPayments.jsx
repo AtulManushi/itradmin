@@ -8,6 +8,7 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaCity,
+  FaTools,
 } from "react-icons/fa";
 
 export default function PendingPayments() {
@@ -60,6 +61,11 @@ export default function PendingPayments() {
                   <FaRupeeSign /> Amount
                 </span>
               </th>
+              <th className="py-3 px-6 font-semibold">
+                <div className="flex items-center gap-2">
+                  <FaTools /> Service
+                </div>
+              </th>
               <th className="py-3 px-6 font-semibold text-sm">
                 <span className="inline-flex items-center gap-2">
                   <FaExclamationCircle /> Status
@@ -90,6 +96,9 @@ export default function PendingPayments() {
                   </td>
                   <td className="py-3 px-6 text-gray-700">{o.plan}</td>
                   <td className="py-3 px-6 text-gray-700">₹{o.amount}</td>
+                  <td className="py-3 px-6 text-gray-700 font-semibold">
+                    {o.service}
+                  </td>
                   <td className="py-3 px-6 text-gray-700">
                     <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm font-medium">
                       {o.status}
